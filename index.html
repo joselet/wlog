@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generador de Entrada de Blog</title>
+    <style>
+        #editor {
+            border: 1px solid #ccc;
+            min-height: 300px;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Generar Entrada de Blog</h1>
+    <div contenteditable="true" id="editor" placeholder="Pega aquí tu texto e imágenes"></div>
+    <button onclick="generarEntrada()">Generar Entrada de Blog</button>
+
+    <div id="resultado">
+        <h2>Entrada generada:</h2>
+        <div id="contenidoHTML"></div>
+    </div>
+
+    <script>
+        function generarEntrada() {
+            var contenido = document.getElementById("editor").innerHTML;
+            // Aquí puedes hacer el procesamiento del contenido si es necesario
+            document.getElementById("contenidoHTML").innerHTML = contenido;
+        }
+    </script>
+</body>
+</html>
